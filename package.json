@@ -1,0 +1,17 @@
+{
+    "name": "come",
+    "version": "0.0.1",
+    "description": "The game of Come in JS",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "author": "Joshua Alexander, Ireton Liu",
+    "license": "ISC",
+    "dependencies": {
+        "p5": "^1.8.0",
+        "vite": "^4.5.0"
+    }
+}
