@@ -166,8 +166,8 @@ class Board{
     }
 }
 
-var canvasWidth=1000
-var canvasHeight=1000;
+var canvasWidth=window.innerWidth;
+var canvasHeight=window.innerHeight;
 var boardResolution = 9;
 var stepSize = 50;
 var currentTurn = 0;
@@ -187,6 +187,12 @@ function draw(){
     board.drawPieceGhost(mouseX, mouseY, currentTurn);
     noFill();
     circle(canvasWidth/2, canvasHeight/2, stepSize*2*(boardResolution-1))
+}
+window.onresize = function() {
+  // assigns new values for width and height variables
+  w = window.innerWidth;
+  h = window.innerHeight;  
+  canvas.size(w,h);
 }
 
 function mouseClicked() {
