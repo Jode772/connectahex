@@ -183,10 +183,10 @@ function setup(){
 function draw(){
     clear();
     background(161,102,47);
+    circle(canvasWidth/2, canvasHeight/2, stepSize*2*(boardResolution-1))
     board.drawBoard();
     board.drawPieceGhost(mouseX, mouseY, currentTurn);
     noFill();
-    circle(canvasWidth/2, canvasHeight/2, stepSize*2*(boardResolution-1))
 }
 window.onresize = function() {
   // assigns new values for width and height variables
