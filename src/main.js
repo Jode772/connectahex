@@ -173,20 +173,32 @@ var stepSize = 50;
 var currentTurn = 0;
 var board;
 
+function drawDescription(){
+    fill(0);
+    textSize(32);
+    text("Rules of the game:", 20, 40);
+    textSize(24);
+    text("- Players alternate placing stones on intersection, one per turn.", 20, 80);
+    text("- The game ends when all intersections are occupied.", 20, 120);
+    text("- The player with the fewest disconnected groups of stones wins.", 20, 160);
+}
 function setup(){
     createCanvas(canvasWidth, canvasHeight);    
     console.log("Setup complete");
+
     board = new Board(boardResolution, canvasWidth/2, canvasHeight/2, stepSize);
+
     
 }
 
 function draw(){
     clear();
     background(161,102,47);
+    drawDescription();
+    noFill();
     circle(canvasWidth/2, canvasHeight/2, stepSize*2*(boardResolution-1))
     board.drawBoard();
     board.drawPieceGhost(mouseX, mouseY, currentTurn);
-    noFill();
 }
 window.onresize = function() {
   // assigns new values for width and height variables
